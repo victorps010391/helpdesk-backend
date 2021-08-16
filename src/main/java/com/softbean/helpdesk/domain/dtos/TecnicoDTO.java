@@ -26,6 +26,7 @@ public class TecnicoDTO implements Serializable {
 
 	public TecnicoDTO() {
 		super();	
+		addPerfil(Perfil.CLIENTE);
 	}
 
 	public TecnicoDTO(Integer id, String nome, String cpf, String email, String senha, Set<Integer> perfis,
@@ -38,6 +39,7 @@ public class TecnicoDTO implements Serializable {
 		this.senha = senha;
 		this.perfis = perfis;
 		this.dataCriacao = dataCriacao;
+		addPerfil(Perfil.CLIENTE);
 	}
 	
 	public TecnicoDTO(Tecnico obj) {
